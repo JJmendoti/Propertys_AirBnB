@@ -23,9 +23,9 @@ class UsersModel extends CI_Model {
         $this->db->insert("properties",$propertyData);
     }
 
-    public function delete($property){
-    $response=$this->db->query("DELETE FROM properties WHERE id ={$property->id} && id_user={$property->id_user}");
-        return $response;
+    public function delete($id){
+        $this->db->delete('properties', $id);
+    
     }
 
     public function listProperties(){
@@ -43,10 +43,10 @@ class UsersModel extends CI_Model {
         return $response;
     }
 
-    public function updateProperty($property){
-        $response = $this->db->query("UPDATE properties SET title='{$property->title}',
-        type='{$property->type}', address='{$property->address}',rooms={$property->rooms},
-        price={$property->price}, area={$property->area} WHERE  id= {$property->id} && id_user= {$property->id_user}");
+    public function updateProperty($id, $property){
+        $response = $this->db->query("UPDATE properties SET title='{$property['title']}',
+        type='{$property['type']}', address='{$property['address']}',rooms={$property ['rooms']},
+        price={$property ['price']}, area={$property ['area']} WHERE  id= {$id} && id_user= {$property ['id_user']}");
         return $response;
     }
 
