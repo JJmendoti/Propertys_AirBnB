@@ -11,11 +11,21 @@ class Property extends CI_Controller {
 		$this->load->view('layouts/footer');
     }
     
-    public function addProperty()
+    public function addPropertys()
 	{
-       // $result = array('properties'=> $this->UsersModel->listProperties());
+        //$result = array('createproperties'=> $this->UsersModel->addproperty());
 		$this->load->view('layouts/header');
-		$this->load->view('addproperty');
+		$this->load->view('addProperty');
+		$this->load->view('layouts/footer');
+	}
+
+	public function updateProperty()
+	{
+		$id = $_GET['id'];
+        $property = $this->UsersModel->getPropertiesForId($id);
+        $ListProperty = array('property'=>$property);
+        $this->load->view('layouts/header');
+		$this->load->view('updateProperty', $ListProperty );
 		$this->load->view('layouts/footer');
 	}
 	
