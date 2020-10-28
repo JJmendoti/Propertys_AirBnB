@@ -4,19 +4,18 @@
             <h2>Propiedades de User por Precio</h2>
         </div>
         <div class="col">
-            <a href="<?php echo base_url() .'Property/addPropertys'; ?>" type="button" id="boton" class="btn btn-outline-primary ml-5 mr-5">ADD PROPERTY</a>
-            <a href="<?php echo base_url() .'Property/getProperty'; ?>" type="button" id="boton" class="btn btn-outline-info mr-5 ml-5">getProperty</a>
-            <a href="<?php echo base_url() .'Property/listPriceUser'; ?>" type="button" id="boton" class="btn btn-outline-dark mr-5 ml-5">getdUser</a>
+            <a href="<?php echo base_url() . 'Property/addPropertys'; ?>" type="button" id="boton" class="btn btn-outline-primary ml-5 mr-5">ADD PROPERTY</a>
+            <a href="<?php echo base_url() . 'Property/getProperty'; ?>" type="button" id="boton" class="btn btn-outline-info mr-5 ml-5">getProperty</a>
+            <a href="<?php echo base_url() . 'Property/listPriceUser'; ?>" type="button" id="boton" class="btn btn-outline-dark mr-5 ml-5">getdUser</a>
         </div>
     </div>
 </div>
 <div class="container fondo-propiedades mt-3 mb-3">
     <div class='row mt-3'>
         <?php
-            foreach($properties as $property)
-        {
-                //se pinta registros obtenidos de la tabla 
-                $template ="
+        foreach ($properties as $property) {
+            //se pinta registros obtenidos de la tabla 
+            $template = "
                 <div class = 'col-12 col-md-4'>  
                     <div class='card mt-2' style='width: 22rem;'>                    
                         <div class='card-body text-center'>
@@ -34,7 +33,7 @@
                             <a href= 'http://localhost/ProgramacionWeb2/Propertys_AirBnB/Property/updateProperty?id={$property->id}'card-link' class='btn btn-success ml-5'>UPDATE</a>
                         </div>
                     </div>
-                </div>";        
+                </div>";
             echo $template;
         }
         ?>

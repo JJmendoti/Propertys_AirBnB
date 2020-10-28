@@ -4,7 +4,7 @@
             <h2 class="title">UPDATE PROPERTY</h2>
             <div class="row">
                 <div class="col-md-6">
-                <div class="input-field">
+                    <div class="input-field">
                         <i class="fas fa-list-ol"></i>
                         <input type="text" value="<?php echo $_GET['id'] ?>" name="id" id="ide" placeholder="id" readonly>
                     </div>
@@ -30,7 +30,7 @@
                 <div class="col-md-6">
                     <div class="input-field">
                         <i class="fas fa-user-check"></i>
-                        <input type="text" value="<?php echo $property[0]->id_user ?>" name="id_user" id="id_user" placeholder="id_user" readonly/>
+                        <input type="text" value="<?php echo $property[0]->id_user ?>" name="id_user" id="id_user" placeholder="id_user" readonly />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-door-open"></i>
@@ -50,9 +50,9 @@
             </div>
 
             <input type="submit" class="btnn" value="Update" />
-            </form>
+        </form>
 
 
     </div>
-    </div>
+</div>
 </div>
