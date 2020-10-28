@@ -11,11 +11,10 @@
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password"  placeholder="password" />
+                    <input type="password" name="password" id="password" placeholder="password" />
 
                 </div>
                 <input type="submit" name="Sign" value="Login" class="btnn solid" />
-
                 <p class="social-text">Or Sign in with social platforms</p>
                 <div class="social-media">
                     <a href="#" class="social-icon">
@@ -32,7 +31,6 @@
                     </a>
                 </div>
             </form>
-
 
             <!-- Formuario para registro -->
             <form name="Signup" action="<?php echo base_url() . 'Api/signUp'; ?>" method="POST" class="sign-up-form" onsubmit="return validateSignup();">
@@ -72,9 +70,14 @@
                         </div>
                     </div>
                 </div>
-                <input  type="submit" class="btnn" role="button" aria-pressed="true" name="Signup" value="Sign up" onclick=""/>
+                <input type="submit" class="btnn" role="button" aria-pressed="true" name="Signup" value="Sign up" onclick="" />
                 <!-- <input type="submit" class="" role="button" aria-pressed="true" name="" value="Sign up"> -->
-
+                <div class="alert alert-success  alert-dismissible fade show" style="display: none;" role="alert" id="alertt">
+                    <strong>Usuario Creado!</strong> Se creo el usuario con satisfacción.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
                 <p class="social-text">Or Sign up with social platforms</p>
                 <div class="social-media">
@@ -111,6 +114,7 @@
             <img src="<?php echo base_url(); ?>/assets/images/signuplogmen.svg" class="image" alt="" />
         </div>
         <div class="panel right-panel">
+
             <div class="content">
                 <h3>One of us ?</h3>
                 <p>

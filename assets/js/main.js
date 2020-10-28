@@ -176,6 +176,9 @@ function validateSignup() {
 			closeButtonAriaLabel: 'close alert'
 		});
 		return false;
+	}else{
+		let alertt = document.getElementById("alertt");
+        alertt.style.display = "block";
 	}
 }
 
@@ -234,6 +237,9 @@ function validateSignIn() {
 			closeButtonAriaLabel: 'close alert'
 		});
 		return false;
+	}else{
+		let aleertt = document.getElementById("aleertt");
+        aleertt.style.display = "block";
 	}
 }
 
