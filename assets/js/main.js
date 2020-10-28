@@ -211,3 +211,270 @@ function validateSignIn() {
 		return false;
 	}
 }
+
+
+function validateproperty() {
+
+	let titlee = document.getElementById("titlee").value;
+	let type = document.getElementById("type").value;
+	let address = document.getElementById("address").value;
+	let rooms = document.getElementById("rooms").value;
+	let price = document.getElementById("price").value;
+	let area = document.getElementById("area").value;
+	let id_user = document.getElementById("id_user").value;
+
+	if (titlee === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo title esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+
+	} else if (type === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo type esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+	} else if (address === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo address esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+
+		return false;
+
+	} else if (rooms === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo rooms esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+
+	} else if (price === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo price esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+
+	} else if (area === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo area esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+
+	} else if (id_user === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo id_user esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+
+	}
+
+}
+
+
+function AlertDelet() {
+
+	let actiondelete = confirm("Seguro desea Eliminar el Registro");
+	if (actiondelete == true) {
+		Swal.fire({
+			text: "Has Eliminado el Registro!",
+			icon: "success",
+			iconColor: "green",
+			confirmButtonText: 'Continuar',
+			background: '#a9b2b7',
+			backdrop: true,
+			toast: true,
+			position: 'top',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#ff2f2f',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return true;
+		
+	} else {
+
+		Swal.fire({
+			title: "cancelar",
+			text: "Has cancelado la acción de Eliminar!",
+			icon: "info",
+			iconColor: "blue",
+			confirmButtonText: 'Continuar',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'top',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#3fc3ee',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+	}
+}
+
+function validateUsers(){
+
+	let id_userSs = document.getElementById("id_userSs").value;
+
+	if (id_userSs === "") {
+		Swal.fire({
+			title: "Error",
+			text: "El campo id_user esta vacio",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+	}
+}

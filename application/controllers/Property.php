@@ -28,5 +28,34 @@ class Property extends CI_Controller {
 		$this->load->view('updateProperty', $ListProperty );
 		$this->load->view('layouts/footer');
 	}
+
 	
+	public function getProperty()
+	{
+		$result = array('properties'=> $this->UsersModel->getSortedProperties());
+		$this->load->view('layouts/header');
+		$this->load->view('getProperty', $result);
+		$this->load->view('layouts/footer');
+	}
+
+	public function getdUsers()
+	{
+		$id = $_GET['id_user'];
+		$result = array('properties'=> $this->UsersModel->getSortedUserProperties($id));
+			$this->load->view('layouts/header');
+			$this->load->view('getdUsers',$result);
+			$this->load->view('layouts/footer');
+			// $redirect =base_url().'Property/';
+			// header("location: $redirect");
+	}
+	
+	
+	public function listPriceUser()
+	{
+		
+		$this->load->view('layouts/header');
+		$this->load->view('listPriceUser');
+		$this->load->view('layouts/footer');
+	}
+
 }

@@ -13,6 +13,7 @@ input {
     color: red;
 }
 
+
 .site-header.inicio {
     background-image: url("../images/header.jpg");
     background-position: center center;
@@ -21,6 +22,9 @@ input {
     min-height: 60rem;
 }
 
+.btn{
+    margin-top: 5px;
+}
 .header{
     background-color: #000;
 }
@@ -406,6 +410,11 @@ form.sign-in-form {
         top: 5%;
         transform: translate(-50%, 0);
     }
+    #boton{
+        margin-left: 1%;
+        
+        
+    }
 }
 
 @media (max-width: 570px) {
@@ -428,5 +437,16 @@ form.sign-in-form {
     .containerr.sign-up-mode:before {
         bottom: 28%;
         left: 50%;
+    }
+    #boton{
+        margin-left: 25%;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 436px) {
+    #boton{
+        margin-left: 10%;
+        margin-top: 10px;
+    
     }
 }

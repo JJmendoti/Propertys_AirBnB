@@ -33,6 +33,8 @@ class UsersModel extends CI_Model {
         return $response;
     }
 
+
+
     public function getProperties($id_user){
         $response = $this->db->query("SELECT * FROM properties WHERE id_user= '{$id_user}'")->result();
         return $response;
@@ -49,14 +51,14 @@ class UsersModel extends CI_Model {
         price={$property ['price']}, area={$property ['area']} WHERE  id= {$id} && id_user= {$property ['id_user']}");
         return $response;
     }
-
+    
     public function getSortedProperties(){
-        $response = $this->db->query("SELECT * FROM properties ORDER BY  price DESC")->result();
+        $response = $this->db->query("SELECT * FROM properties ORDER BY price desc")->result();
         return $response;
     }
 
     public function getSortedUserProperties($id_user){
-        $response = $this->db->query("SELECT * FROM properties WHERE id_user='{$id_user}' ORDER BY  price DESC")->result();
+        $response = $this->db->query("SELECT * FROM properties WHERE id_user={$id_user} order by price desc")->result();
         return $response;
     }
 

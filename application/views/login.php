@@ -7,11 +7,11 @@
                 <div class="input-field">
                     <i class="fas fa-user"></i>
 
-                    <input type="email" name="email" id="email" value="<?php echo set_value('email'); ?>" placeholder="email" />
+                    <input type="email" name="email" id="email" placeholder="email" />
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password" value="<?php echo set_value('password'); ?>" placeholder="password" />
+                    <input type="password" name="password" id="password"  placeholder="password" />
 
                 </div>
                 <input type="submit" name="Sign" value="Login" class="btnn solid" />

@@ -167,8 +167,6 @@ class Api extends CI_Controller
 
 
     public function addproperty()
-
-
     {
         $method = $_SERVER['REQUEST_METHOD'];
         if ($method === 'POST') {
@@ -382,6 +380,7 @@ class Api extends CI_Controller
                 header('content-type: application/json');
                 $response = array('response' => 'no se encontraron registros en la BD');
                 echo json_encode($response);
+                
             }
         }
         else{
@@ -391,29 +390,7 @@ class Api extends CI_Controller
         }
     }
 
-    public function getSortedUserProperties(){
-        $method = $_SERVER['REQUEST_METHOD'];
-        if($method === 'GET'){
-        $dataJson = file_get_contents('php://input');
-            $data = json_decode($dataJson);
-            $result = $this->UsersModel->getSortedUserProperties($data->id_user); 
-            if($result != null)
-            {
-                header('content-type: application/json');
-                $response = array('response' => $result);
-                echo json_encode($response);
-            }else{
-                header('content-type: application/json');
-                $response = array('response' => 'el id no existe');
-                echo json_encode($response);
-            } 
-        }
-        else{
-            header('content-type: application/json');
-            $response = array('response' => 'bad request');
-            echo json_encode($response);
-        }
-    }
+
 }
 
 /* End of file Api.php */

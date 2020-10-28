@@ -18,7 +18,7 @@
 
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" style="width: 150px; " href="<?php echo base_url() . "HomeController" ?>"><img src="<?php echo base_url(); ?>/assets/images/logo.svg" alt="" /></a>
+            <a class="navbar-brand text-white" style="width: 150px; " href="<?php echo base_url() . "HomeController" ?>">AirBnB Propertys!<img src=".." alt="" /></a>
 
             <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() . "features" ?>" tabindex="-1" aria-disabled="true"></a>
+                        <a class="nav-link text-white" href="<?php echo base_url() . "Property" ?>" tabindex="-1" aria-disabled="true">Propertys</a>
                     </li>
                 </ul>
             </div>
