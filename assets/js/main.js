@@ -6,6 +6,8 @@ function validateSignup() {
 	let lastname = document.getElementById("lastname").value;
 	let emailsito = document.getElementById("emailsito").value;
 	let passwordd = document.getElementById("passwordd").value;
+	let valipasswordd = /^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z¡@#$%&?¿!]{8,16}$/;
+
 
 	if (type_identification === "") {
 		Swal.fire({
@@ -150,8 +152,31 @@ function validateSignup() {
 			closeButtonAriaLabel: 'close alert'
 		});
 		return false;
-	}
 
+	} else if (!valipasswordd.test(passwordd)) {
+		Swal.fire({
+			title: "Error",
+			text: "El campo password no tiene los carateres requeridos ¡@#$%&?¿!",
+			icon: "error",
+			confirmButtonText: 'Continuar',
+			footer: '<span class="footer-alert">Esta información es importante</span>',
+			background: '#ddd',
+			backdrop: true,
+			toast: true,
+			position: 'center',
+			allowOutsideClick: false,
+			allowEscapeKey: true,
+			allowEnterKey: true,
+			stopKeydownPropagation: false,
+			showConfirmButton: true,
+			confirmButtonColor: '#c20707',
+			confirmButtonAriaLabel: 'Continuar',
+			buttonsStyling: true,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'close alert'
+		});
+		return false;
+	}
 }
 
 
@@ -421,7 +446,7 @@ function AlertDelet() {
 			closeButtonAriaLabel: 'close alert'
 		});
 		return true;
-		
+
 	} else {
 
 		Swal.fire({
@@ -449,7 +474,7 @@ function AlertDelet() {
 	}
 }
 
-function validateUsers(){
+function validateUsers() {
 
 	let id_userSs = document.getElementById("id_userSs").value;
 
